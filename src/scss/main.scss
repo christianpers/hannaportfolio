@@ -1,0 +1,260 @@
+html, body {
+	width:100%;
+	height:100%;
+
+	margin:0;
+	padding:0;
+
+	// overflow:hidden;
+	position: static;
+	background: #fff;
+}
+
+body{
+	height: 100%;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+html {
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+h1,h2,h3,h4,h5,text,p {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-webkit-font-smoothing: antialiased;
+	font-family: Arial;
+}
+
+
+
+.container{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width:100%;
+	height:100%;
+	opacity: 0;
+
+}
+
+.Main-Canvas {
+	width:100%;
+	height:100%;
+	top:0px;
+	left:0px;
+	position: absolute;
+	z-index: 0;
+}
+
+.imageContainer{
+	position: absolute;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+}
+
+
+
+.logo{
+	color: black;
+    font-family: Helvetica;
+    font-weight: lighter;
+    position: fixed;
+    left: 14px;
+    top: 16px;
+    z-index: 20;
+    margin: 0;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+.nav{
+	position: fixed;
+    top: 0px;
+    right: 0px;
+    font-family: Helvetica;
+    padding: 18px;
+    z-index: 1;
+    color: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+    width: 100%;
+    background: white;
+    text-align: right;
+
+	// background: rgba(0,0,0,.2);
+	.nav-item{
+		cursor: pointer;
+		padding: 10px;
+		font-size: 10px;
+		text-transform: uppercase;
+		&:hover{
+			background: rgba(0,0,0,.06);
+		}
+	}
+
+}
+
+.overlay{
+	position: absolute;
+	z-index: 3;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	opacity: 0;
+	display: none;
+	// -webkit-transition: opacity 2s, transform 2s;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+    transition: opacity .6s, transform .6s;  /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
+    color: rgba(0,0,0,.8);
+    // -webkit-transform: scale(0.8);  /* Chrome, Opera 15+, Safari 3.1+ */
+    //   -ms-transform: scale(0.8);  /* IE 9 */
+    transform: scale(.8);  /* Firefox 16+, IE 10+, Opera */
+    // background: rgba(0,0,0,.3);
+    padding: 40px 100px;
+    // background: rgba(255,255,255,.6);
+    .overlayTitle{
+    	text-align: center;
+    	font-size: 32px;
+
+    }
+    
+
+
+	
+}
+
+.touch-layer{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.info-content{
+	padding-top: 20%;
+	text-align: center;
+	> h1{
+		font-size: 60px;
+		color: rgba(0,0,0,.8);
+	}
+}
+
+.about{
+	// background: rgba(250, 40, 40, .7);
+	.overlayDescr{
+    	line-height: 22px;
+    }
+}
+
+
+
+.container-content{
+	position: fixed;
+	width: 100%;
+}
+
+#top-container{
+	top: 40px;
+	left: 0;
+	background: rgba(255,255,255,.8);
+	.topImg{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+	}
+}
+
+#projects-container{
+	background: white;
+	z-index: 2;
+	.project-thumb{
+		position: absolute;
+		cursor: pointer;
+
+		.thumb-info{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0,0,0,.6);
+			opacity: 0;
+			transition: opacity .3s;
+			.thumb-title{
+				color: white;
+				font-size: 30px;
+				text-align: center;
+				padding-top: 40px;
+			}
+		}
+	}
+
+
+}
+
+#detail-container{
+	top: 0;
+	left: 0;
+	background: white;
+	display: none;
+	position: absolute;
+	z-index: 3;
+	-webkit-transition: -webkit-transform .6s ease; /* Changed here */ 
+    -moz-transition: -moz-transform .6s ease;
+    -o-transition: -o-transform .6s ease;
+    transition: transform .6s ease;
+
+	.close-arrow{
+		position: absolute;
+	    bottom: 30px;
+	    height: 105px;
+	    width: 40px;
+	    left: 50%;
+	    margin-left: -20px;
+	    cursor: pointer;
+	    transition: transform .2s;
+	    transform: translate(0,0);
+	    &:hover{
+	    	transform: translate(0,2px);
+	    }
+	}
+	.detail-copy{
+		float: left;
+	    padding: 30px;
+	    width: 40%;
+	    font-size: 16px;
+	    line-height: 28px;
+	}
+}
+
+.info-content{
+	display: none;
+}
+
+#info-container{
+	top: 0;
+	left: 0;
+	background: white;
+	display: none;
+	position: absolute;
+	z-index: 3;
+	-webkit-transition: -webkit-transform .6s ease; /* Changed here */ 
+    -moz-transition: -moz-transform .6s ease;
+    -o-transition: -o-transform .6s ease;
+    transition: transform .6s ease;
+}
+
+
+
+
+
+
