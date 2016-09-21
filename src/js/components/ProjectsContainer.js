@@ -37,7 +37,7 @@ export default class ProjectsContainer{
 				"title" : "Electroknit",
 				"detail" : {
 					"copy" : "proj-one",
-					"pics" : []
+					"pics" : ['1.jpg','2.jpg']
 				}
 			},
 			"Two" : {
@@ -45,7 +45,7 @@ export default class ProjectsContainer{
 				"title" : "iamiwhoami",
 				"detail" : {
 					"copy" : "proj-two",
-					"pics" : []
+					"pics" : ['1.jpg','2.jpg']
 				}
 			},
 			"Three" : {
@@ -53,7 +53,7 @@ export default class ProjectsContainer{
 				"title" : "Thompson",
 				"detail" : {
 					"copy" : "proj-three",
-					"pics" : []
+					"pics" : ['1.jpg','2.jpg']
 				}
 			},
 			"Four" : {
@@ -61,7 +61,7 @@ export default class ProjectsContainer{
 				"title" : "Thompson",
 				"detail" : {
 					"copy" : "proj-four",
-					"pics" : []
+					"pics" : ['1.jpg','2.jpg']
 				}
 			},
 			"Five" : {
@@ -69,7 +69,7 @@ export default class ProjectsContainer{
 				"title" : "Woman Defined",
 				"detail" : {
 					"copy" : "proj-five",
-					"pics" : []
+					"pics" : ['1.jpg','2.jpg']
 				}
 			},
 			"Six" : {
@@ -77,7 +77,7 @@ export default class ProjectsContainer{
 				"title" : "Yarn",
 				"detail" : {
 					"copy" : "proj-six",
-					"pics" : []
+					"pics" : ['1.jpg','2.jpg']
 				}
 			},
 			"Seven" : {
@@ -85,7 +85,7 @@ export default class ProjectsContainer{
 				"title" : "Thompson",
 				"detail" : {
 					"copy" : "proj-seven",
-					"pics" : []
+					"pics" : ['1.jpg','2.jpg']
 				}
 			},
 			"Eight" : {
@@ -93,7 +93,7 @@ export default class ProjectsContainer{
 				"title" : "Woman Defined",
 				"detail" : {
 					"copy" : "proj-eight",
-					"pics" : []
+					"pics" : ['1.jpg','2.jpg']
 				}
 			},
 			"Nine" : {
@@ -101,7 +101,7 @@ export default class ProjectsContainer{
 				"title" : "Yarn",
 				"detail" : {
 					"copy" : "proj-nine",
-					"pics" : []
+					"pics" : ['1.jpg','2.jpg']
 				}
 			}
 		};

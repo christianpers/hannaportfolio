@@ -19,6 +19,24 @@ class Starter {
 
 		
 		// this.sceneMain = new SceneMain(container);
+		
+
+		function transformProp() {
+		  var testEl = document.createElement('div');
+		  if(testEl.style.transform == null) {
+		    var vendors = ['Webkit', 'Moz', 'ms'];
+		    for(var vendor in vendors) {
+		      if(testEl.style[ vendors[vendor] + 'Transform' ] !== undefined) {
+		        return vendors[vendor] + 'Transform';
+		      }
+		    }
+		  }
+		  return 'transform';
+		};
+		
+		window.NS = {};
+		window.NS.transform = transformProp();
+
 		this.sceneMain = new SceneMain();
 
 		// this.reqFrame();

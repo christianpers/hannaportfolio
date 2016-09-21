@@ -1,3 +1,5 @@
+import ViewSlider from "./ViewSlider";
+
 export default class ProjectDetail{
 
 	constructor(el){
@@ -11,10 +13,23 @@ export default class ProjectDetail{
 		});
 
 		this.currProjCopy = undefined;
+
+		
+		
 	
 	}
 
+	sliderLoaded(){
+
+
+	}
+
 	open(projData){
+
+		var sliderWrapper = document.createElement('div');
+		sliderWrapper.className = 'projectSlider';
+		this._el.appendChild(sliderWrapper);
+		this._slider = new ViewSlider(sliderWrapper, projData.detail, this.sliderLoaded, this);
 
 		this.currProjCopy = this._el.querySelector('.'+projData.detail.copy);
 
@@ -34,6 +49,8 @@ export default class ProjectDetail{
 		setTimeout(()=>{
 
 			this._el.style.transform = 'translate(0, -'+winH+'px)';
+
+			this._slider.show(0);
 		},20);
 
 		
@@ -58,6 +75,12 @@ export default class ProjectDetail{
 	close(){
 
 		this._el.style.transform = 'translate(0, 0)';
+
+		var sliderWrapper = this._el.querySelector('.projectSlider');
+		if (sliderWrapper)
+			this._el.removeChild(sliderWrapper);
+
+		this._slider = null;
 
 		setTimeout(()=>{
 			this._el.style.display = 'none';
